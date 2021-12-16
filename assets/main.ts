@@ -12,7 +12,8 @@ for (let buttonElement of button) {
 }
 
 equal.addEventListener('click', function () {
-    para.innerHTML = eval(para.innerHTML);
+    para.innerHTML = Function("return " + para.innerHTML)();
+
 })
 
 reset.addEventListener('click', function () {
